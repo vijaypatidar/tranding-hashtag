@@ -5,6 +5,7 @@ import com.vkpapps.post.dtos.CreatePostResponse;
 import com.vkpapps.post.services.PostService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,7 +16,7 @@ public class PostController {
     private final PostService postService;
 
     @PostMapping
-    public CreatePostResponse create(CreatePostRequest request) {
+    public CreatePostResponse create(@RequestBody CreatePostRequest request) {
         return postService.create(request);
     }
 }
