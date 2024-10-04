@@ -1,6 +1,6 @@
 services:
   broker:
-    image: apache/kafka-native:2986f6c5c16ea4ff41c3de0fc41c4290f724b5f143b3062e7685653b4745a03f
+    image: apache/kafka-native:3.8.0
     container_name: broker
     ports:
       - 9092:9092
